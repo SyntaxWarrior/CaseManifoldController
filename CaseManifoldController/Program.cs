@@ -7,6 +7,7 @@ namespace CaseManifoldController
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(string.Join(", ",System.IO.Ports.SerialPort.GetPortNames()));
             if (args.Length == 4)
             {
                 var comPort = args[0];
