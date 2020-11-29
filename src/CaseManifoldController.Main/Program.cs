@@ -7,6 +7,14 @@ namespace CaseManifoldController
     {
         static void Main(string[] args)
         {
+            if (args.Length == 4)
+            {
+                SetServoPosition(args[0], 9600, int.Parse(args[1]), int.Parse(args[2]), int.Parse(args[3]));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Arguments, expected 'Comport', 'servo', 'position', 'speed'");
+            }
             while (true)
             {
                 var position = int.Parse(Console.ReadLine());
