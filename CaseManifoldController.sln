@@ -3,24 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseManifoldController.Main", "src\CaseManifoldController.Main\CaseManifoldController.Main.csproj", "{61B74A4A-36F9-41A7-99FA-967A2D972E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseManifoldController", "CaseManifoldController\CaseManifoldController.csproj", "{6ABAB7D0-1B9E-4A3E-B56F-B6E8D80D1116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Debug|x86.Build.0 = Debug|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Release|x86.ActiveCfg = Release|Any CPU
-		{61B74A4A-36F9-41A7-99FA-967A2D972E5A}.Release|x86.Build.0 = Release|Any CPU
+		{6ABAB7D0-1B9E-4A3E-B56F-B6E8D80D1116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABAB7D0-1B9E-4A3E-B56F-B6E8D80D1116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABAB7D0-1B9E-4A3E-B56F-B6E8D80D1116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABAB7D0-1B9E-4A3E-B56F-B6E8D80D1116}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

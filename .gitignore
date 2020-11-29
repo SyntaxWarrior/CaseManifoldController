@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/CaseManifoldController/DesignTimeBuild
 /.vs
-/src/CaseManifoldController.Main/obj
+/CaseManifoldController/bin/
+/CaseManifoldController/obj
+/CaseManifoldController/Properties/launchSettings.json

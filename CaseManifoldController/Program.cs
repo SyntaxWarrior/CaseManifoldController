@@ -9,17 +9,19 @@ namespace CaseManifoldController
         {
             if (args.Length == 4)
             {
-                SetServoPosition(args[0], 9600, int.Parse(args[1]), int.Parse(args[2]), int.Parse(args[3]));
+                var comPort = args[0];
+                int baudRate = 9600;
+                int servoNumber = int.Parse(args[1]);
+                int position = int.Parse(args[2]);
+                int speed = int.Parse(args[3]);
+                SetServoPosition(comPort, baudRate, servoNumber, position, speed);
             }
             else
             {
-                Console.WriteLine("Invalid Arguments, expected 'Comport', 'servo', 'position', 'speed'");
+                Console.WriteLine("Invalid Arguments, expected 'Comport', 'servo', 'position (0-254)', 'speed (0-140)', example 'COM4 5 254 100'");
             }
-            while (true)
-            {
-                var position = int.Parse(Console.ReadLine());
-                SetServoPosition("COM4", 9600, 5, position, 20);
-            }
+
+            Console.ReadKey();
         }
 
         public static void SetServoPosition(string ComPort, int BaudRate, int ServoNumber, int ServoPos, int servoSpeed)
