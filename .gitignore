@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/CaseManifoldController/DesignTimeBuild
+/.vs
+/src/CaseManifoldController.Main/obj
