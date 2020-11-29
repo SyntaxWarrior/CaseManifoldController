@@ -26,16 +26,33 @@ namespace CaseManifoldController
 
         public static void SetServoPosition(string ComPort, int BaudRate, int ServoNumber, int ServoPos, int servoSpeed)
         {
-            SerialPort port = new SerialPort(ComPort, BaudRate, Parity.None, 8, StopBits.One);
-            port.Open();
+            try
+            {
+                SerialPort port = new SerialPort(ComPort, BaudRate, Parity.None, 8, StopBits.One);
+                try
+                {
+                    port.Open();
 
-            string ServoNumberHex = ServoNumber.ToString("X");
-            byte ServoNumberByte = byte.Parse(ServoNumberHex, System.Globalization.NumberStyles.HexNumber);
+                    string ServoNumberHex = ServoNumber.ToString("X");
+                    byte ServoNumberByte = byte.Parse(ServoNumberHex, System.Globalization.NumberStyles.HexNumber);
 
-            SetSpeed(port, ServoNumberByte, servoSpeed);
-            SetPosition(port, ServoNumberByte, ServoPos);
-
-            port.Close();
+                    SetSpeed(port, ServoNumberByte, servoSpeed);
+                    SetPosition(port, ServoNumberByte, ServoPos);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    if(port.IsOpen)
+                        port.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write("Failed to send command. Error: " + e.ToString());
+            }
         }
 
         private static void SetSpeed(SerialPort port, byte ServoNumberByte, int servoSpeed)
