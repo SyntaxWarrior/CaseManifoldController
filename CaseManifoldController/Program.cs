@@ -20,8 +20,6 @@ namespace CaseManifoldController
             {
                 Console.WriteLine("Invalid Arguments, expected 'Comport', 'servo', 'position (0-254)', 'speed (0-140)', example 'COM4 5 254 100'");
             }
-
-            Console.ReadKey();
         }
 
         public static void SetServoPosition(string ComPort, int BaudRate, int ServoNumber, int ServoPos, int servoSpeed)
