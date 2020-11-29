@@ -74,7 +74,11 @@ namespace CaseManifoldController
             string ServoPosHex = ServoPos.ToString("X");
             byte PositionByte = byte.Parse(ServoPosHex, System.Globalization.NumberStyles.HexNumber);
 
-            port.Write(new byte[] { 0xFF, ServoNumberByte, PositionByte }, 0, 3);
+            port.Write(new byte[] { 
+                0xFF, 
+                ServoNumberByte, 
+                PositionByte }, 
+            0, 3);
         }
     }
 }
